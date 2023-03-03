@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'data-binding-app';
+  count:number = 0;
+  hide:boolean = true;
+
+  onClick()
+  {
+    this.count++;
+  }
+
+  onClickImg()
+  {
+    if(this.hide === true)
+    {
+      this.hide = false;
+    }
+
+    else if(this.hide === false)
+    {
+      this.hide = true;
+    }
+  }
 }
